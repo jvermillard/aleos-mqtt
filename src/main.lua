@@ -56,7 +56,7 @@ local function init()
   deviceID = dt.get("config.agent.deviceId")
   print("Device ID " .. deviceID)
   
-  MQTT.client.KEEP_ALIVE_TIME = 10
+  MQTT.client.KEEP_ALIVE_TIME = 600
   mqtt_client = MQTT.client.create(host, port, callback)
   
   local connection = mqtt_client:connect(deviceID, deviceID, password)
